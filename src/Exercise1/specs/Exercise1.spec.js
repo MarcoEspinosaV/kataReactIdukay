@@ -16,4 +16,19 @@ describe('Exercise1', () => {
       expect(instance.state).toEqual({});
     });
   });
+
+  describe('Exercise1', () => {
+      it('deberia de retornarme una matriz con el camino a recorrer', () => {
+        const matriz3_3 = [
+            ['I', '0', 1],
+            [1, '0', 1],
+            [1, '0', 'S']
+        ];
+        const salida = instance.calculo(matriz3_3);
+
+        expect(instance.state.matriz1.slice(0,3)).toEqual(['x', 'x', 1]);
+        expect(instance.state.matriz1.slice(3,6)).toEqual([1, 'x', 1]);
+        expect(instance.state.matriz1.slice(6,9)).toEqual([1, 'x', 'x']);
+      });
+  })
 });
